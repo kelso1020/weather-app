@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+}
+
+header {
+    background-color: rgb(135, 135, 255);
+    color: white;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+div {
+    padding: 15px;
+}
+
+#search-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(135, 135, 255);
+    padding: 10px;
+}
+
+.search-input {
+    margin: 5px 0;
+    border: 2px solid blue;
+    border-radius: 5px;
+}
+
+#search, #search-history li {
+    margin: 5px 0;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+#search-history {
+    list-style-type: none;
+}
+
+#forecast {
+    display: flex;
+    justify-content: space-between;
+}
