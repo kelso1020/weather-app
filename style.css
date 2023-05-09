@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 header {
@@ -7,19 +8,22 @@ header {
     color: white;
     padding: 20px;
     margin-bottom: 15px;
+    border-bottom: 2px solid blue;
 }
 
 h1 {
     text-align: center;
+    text-shadow: 5px 5px 5px blue;
 }
 
 main {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
 }
 
 div {
     padding: 15px;
+    height: 100%;
 }
 
 #search-list {
@@ -34,17 +38,34 @@ div {
     margin: 5px 0;
     border: 2px solid blue;
     border-radius: 5px;
+    line-height: 25px;
 }
 
-#search, #search-history li {
+#search {
     margin: 5px 0;
     background-color: blue;
     color: white;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 #search-history {
     list-style-type: none;
+}
+
+#search-history li {
+    margin: 5px 0;
+    padding: 2px 0;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#current-weather, #forecast {
+    padding: 50px 0;
 }
 
 #forecast {
