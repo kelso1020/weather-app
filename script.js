@@ -87,12 +87,24 @@ function displayWeather(city) {
         });
 };
 
+function displaySearchHistory() {
+    var searchedList = JSON.parse(localStorage.getItem('searchHistory')) || [];
+    searchHistory.innerHTML = "";
+
+    for (var city of searchedList) {
+        var liEl = document.createElement('li');
+        liEl.textContent = city;
+        liEl.classList.add('search-history-item');
+        searchHistory.appendChild(liEl);
+    };
+};
+
 searchForm.addEventListener('submit', function(event) {
     event.preventDefault();
 
     var cityName = city.value;
 
-    let searchedList = JSON.parse(localStorage.getItem('searchHistory'));
+    let searchedList = JSON.parse(localStorage.getItem('searchHistory')) || [];
 
     if (searchedList.indexOf(cityName) === -1) {
         searchedList.push(cityName);
@@ -102,4 +114,11 @@ searchForm.addEventListener('submit', function(event) {
 
     city.value = "";
     displayWeather(cityName);
+});
+
+searchHistory.addEventListener('click', function(event) {
+    if (event.target.matches('.search-history-item')) {
+        var searchedCity = event.target.textContent;
+        displayWeather(searchedCity);
+    };
 });
