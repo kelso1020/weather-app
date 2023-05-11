@@ -72,3 +72,15 @@ div {
     display: flex;
     justify-content: space-between;
 }
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    #forecast {
+        flex-direction: column;
+    }
+}
